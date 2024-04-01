@@ -1,10 +1,25 @@
-let customerName = prompt('Enter your full name')
-let customerAddress = prompt`${customerName},Enter his house address`
-let customerAge = prompt`${customerName}, How old are you? :`
-let istTimeDriver = prompt`${customerName}, is it your first time driving?: `
-if(customerAge<18){
-    console.log('sorry not qualified to drive, Engine stops')
-}
-else{
-console.log(`congratulation,${customerName}, you can drive`)
+const myText = document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const resultElement = document.getElementById("resultElement");
+let age;
+mySubmit.onclick = function(){
+    
+    age = myText.value;
+    age = Number(age)
+
+    if (age >= 100){
+        resultElement.textContent =`You're too Old to enter this site`
+    }
+    else if(age == 0){
+        resultElement.textContent =`You can't enter. c'mon, you were just born.`
+    }
+    else if (age >= 18){
+        resultElement.textContent = `you are old enough to eneter this site`
+    }
+    else if(age<0){
+        resultElement.textContent = `Your age can't be below 0`
+    }
+    else{
+        resultElement.textContent = `Your age must be 18+ to eneter this site`
+    }
 }
