@@ -4,12 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my website</title>
+    <link rel="stylesheet" href="just.css" />
   </head>
   <body>
-    <label>Enter your age:</label><br />
-    <input type="text" id="myText" /><br />
+    <input type="checkbox" id="myCheckBox" name="card" />
+    <label for="myCheckBox">Subscribe</label><br /><br />
+
+    <input type="radio" id="visaCardBtn" name="card" />
+    <label for="visaCardBtn">VisaCard</label><br />
+    <input type="radio" id="verveCardBtn" name="card" />
+    <label for="verveCardBtn">VerveCard</label><br />
+    <input type="radio" id="masterCardBtn" name="card" />
+    <label for="masterCardBtn">MasterCard</label><br />
+    <input type="radio" id="payPalBtn" name="card" />
+    <label for="PayPalBtn">PayPal</label><br />
+    <input type="radio" id="cryptoBtn" name="card" />
+    <label for="cryptoBtn">Crypto</label><br /><br />
+
     <button type="submit" id="mySubmit">Submit</button>
-    <p id="resultElement"></p>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
     <script src="get.js"></script>
   </body>
 </html>
