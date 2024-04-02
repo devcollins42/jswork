@@ -1,25 +1,41 @@
-const myText = document.getElementById("myText");
+const myCheckBox = document.getElementById("myCheckBox");
+const visaCardBtn = document.getElementById("visaCardBtn");
+const verveCardbtn = document.getElementById("verveCardBtn");
+const masterCardBtn = document.getElementById("masterCardBtn");
+const payPalBtn = document.getElementById("payPalBtn");
+const cryptoBtn = document.getElementById("cryptoBtn");
 const mySubmit = document.getElementById("mySubmit");
-const resultElement = document.getElementById("resultElement");
-let age;
-mySubmit.onclick = function(){
-    
-    age = myText.value;
-    age = Number(age);
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
 
-    if (age >= 100){
-        resultElement.textContent =`You're TOO OLD to enter this site`;
-    }
-    else if(age == 0){
-        resultElement.textContent =`You can't enter. c'mon, you were just born.`;
-    }
-    else if (age >= 18){
-        resultElement.textContent = `You are old enough to enter this site`;
-    }
-    else if(age<0){
-        resultElement.textContent = `Your age can't be below 0`;
+mySubmit.onclick = function(){
+    if(myCheckBox.checked){
+        subResult.textContent = `You are subscribed!`;
     }
     else{
-        resultElement.textContent = `You must must be 18+ to eneter this site`;
+        subResult.textContent = `You are Not subscribed!`;
     }
+    if(visaCardBtn.checked){
+        paymentResult.textContent = `You're paying with VisaCard`
+    }
+    else if(verveCardbtn.checked){
+        paymentResult.textContent = `You're paying with VerveCard`
+    }
+    else if (masterCardBtn.checked){
+        paymentResult.textContent = `You're paying with MasterCard`
+    }
+    else if(payPalBtn.checked){
+        paymentResult.textContent = `You're will be redirected to your palpal account`
+    }
+    else if (cryptoBtn.checked){
+       paymentResult.textContent = `You can only pay with ETH or Sol!`
+    }
+    else{
+        paymentResult.textContent = `Kindly select a valid payment method!`
+    }
+
+
+
+
+
 }
